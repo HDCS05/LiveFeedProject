@@ -69,30 +69,7 @@ class Articles extends Component {
       <Container fluid>
         <Row>
 
-          <Col size="md-6">
-            <Jumbotron>
-              <h1>Scraped Articles</h1>
-            </Jumbotron>
-            {this.state.newsScraped.length ? (
-              <List>
-                {this.state.newsScraped.map(newsvalues => (
-                  <ListItem key={newsvalues.id}>
-                    {newsvalues.title}<br />
-                    <br />{newsvalues.description}<br />
-                    {/* <Link to={"/articles/" + article._id}> */}
-                      <strong>
-                        <br /><a href={newsvalues.link} target="_blank">{newsvalues.link}</a>
-                        {/* {article.link} */}
-                      </strong>
-                    {/* </Link> */}
-                    {/* <DeleteBtn onClick={() => this.deleteArticle(article._id)} /> */}
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
+          
           {/* <Col size="md-6">
             <Jumbotron>
               <h1>What Books Should I Read?</h1>
@@ -124,9 +101,9 @@ class Articles extends Component {
               </FormBtn>
             </form>
           </Col> */}
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
-              <h1>Saved Articles</h1>
+              <h1>Live Feeds</h1>
             </Jumbotron>
             {this.state.articles.length ? (
               <List>
@@ -145,7 +122,7 @@ class Articles extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3></h3>
             )}
           </Col>
         </Row>

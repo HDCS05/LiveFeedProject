@@ -1,10 +1,12 @@
 .jumbotron h1 {
     text-align: center;
-    top: 50%;  
+    top: 75%;  
     bottom: auto;
     transform: translate(0, -50%);
 }
 
 .jumbotron {
 	background-color: lightblue;
+	width: 85%;
+	margin-left:85px;
 }
