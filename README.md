@@ -1,2 +1,0 @@
-# LiveFeedProject
-Live Feed Project
