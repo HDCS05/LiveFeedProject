@@ -24,7 +24,7 @@ class Home extends Component {
                 Live Feeds
               </h1>
               <p>
-              Bacon ipsum dolor amet beef ribs doner capicola frankfurter rump salami spare ribs flank. Meatball filet mignon ham sirloin boudin. Prosciutto picanha leberkas sirloin. Pastrami pork chop tail swine doner, ham hock ground round landjaeger cupim tongue bresaola beef bacon shank. Boudin short loin capicola strip steak, cupim bresaola kielbasa. Drumstick pork pork loin andouille boudin picanha tri-tip ham hock burgdoggen biltong chicken. Andouille ham alcatra sausage prosciutto, salami sirloin.
+              As a food enthusiast, I would like to reduce the time and effort I spend shopping in the greocery store... Because I want to spend more time cooking, and less time at the store.
               </p>
              
             </Jumbotron>
@@ -36,7 +36,7 @@ class Home extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Synopsis</h1>
+              <h1>User Story</h1>
               <p>
                
               </p>
@@ -45,10 +45,12 @@ class Home extends Component {
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Authors</Link>
+            <Link to="/">Back to Authors</Link>
           </Col>
         </Row>
-      </Container>
+
+
+</Container>
     );
   }
 }
