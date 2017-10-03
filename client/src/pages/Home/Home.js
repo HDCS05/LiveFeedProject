@@ -17,5 +17,3 @@ const Home = () =>
       </Col>
     </Row>
   </Container>;
-
-export default Home;
