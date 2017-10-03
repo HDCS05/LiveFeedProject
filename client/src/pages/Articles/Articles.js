@@ -5,7 +5,7 @@ import API from "../../utils/API";
 // import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-// import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Articles extends Component {
   state = {
@@ -44,56 +44,31 @@ class Articles extends Component {
       .catch(err => console.log(err));
   };
 
-  // handleInputChange = event => {
-  //   const { name, value } = event.target;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
 
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   if (this.state.title && this.state.author) {
-  //     API.saveBook({
-  //       title: this.state.title,
-  //       author: this.state.author,
-  //       synopsis: this.state.synopsis
-  //     })
-  //       .then(res => this.loadBooks())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.title && this.state.author) {
+      API.saveBook({
+        title: this.state.title,
+        author: this.state.author,
+        synopsis: this.state.synopsis
+      })
+        .then(res => this.loadBooks())
+        .catch(err => console.log(err));
+    }
+  };
 
   render() {
     return (
       <Container fluid>
         <Row>
-
           <Col size="md-6">
-            <Jumbotron>
-              <h1>Scraped Articles</h1>
-            </Jumbotron>
-            {this.state.newsScraped.length ? (
-              <List>
-                {this.state.newsScraped.map(newsvalues => (
-                  <ListItem key={newsvalues.id}>
-                    {newsvalues.title}<br />
-                    <br />{newsvalues.description}<br />
-                    {/* <Link to={"/articles/" + article._id}> */}
-                      <strong>
-                        <br /><a href={newsvalues.link} target="_blank">{newsvalues.link}</a>
-                        {/* {article.link} */}
-                      </strong>
-                    {/* </Link> */}
-                    {/* <DeleteBtn onClick={() => this.deleteArticle(article._id)} /> */}
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
-          {/* <Col size="md-6">
             <Jumbotron>
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
@@ -123,7 +98,7 @@ class Articles extends Component {
                 Submit Book
               </FormBtn>
             </form>
-          </Col> */}
+          </Col>
           <Col size="md-6">
             <Jumbotron>
               <h1>Saved Articles</h1>
